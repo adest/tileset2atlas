@@ -1,0 +1,31 @@
+/* Auto-generated from components style tags. */
+/* DO NOT EDIT. */
+
+/* ==================================================== 
+   Component x-tileset-configure stylesheet 
+   ==================================================== */
+.form-inline > * {
+  margin-left: 10px;
+}
+.inline {
+  display: inline-block;
+  margin-left: 10px;
+}
+#tileset-area {
+  border: 1px solid #f00;
+}
+
+/* ==================================================== 
+   Component x-tileset-export stylesheet 
+   ==================================================== */
+.button-bar {
+  margin-bottom: 20px;
+}
+.button-bar > button {
+  margin-right: 10px;
+}
+pre {
+  height: 500px;
+  overflow-x: auto;
+}
+

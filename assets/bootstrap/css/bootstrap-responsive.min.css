@@ -1,0 +1,48 @@
+/* Auto-generated from style sheet href = web\assets\bootstrap\css\bootstrap-responsive.min.css */
+/* DO NOT EDIT. */
+
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/ 0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:device-width {
+}
+:device-width .hidden {
+  display: none;
+  visibility: hidden;
+}
+:device-width .visible-phone {
+  display: none !important;
+}
+:device-width .visible-tablet {
+  display: none !important;
+}
+:device-width .hidden-desktop {
+  display: none !important;
+}
+:device-width .visible-desktop {
+  display: inherit !important;
+}
+
