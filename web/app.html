@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="import" href="navbar.html">
+  <link rel="import" href="tileset-choose.html">
+  <link rel="import" href="tileset-configure.html">
+  <link rel="import" href="tileset-export.html">
+</head>
+<body>
+<element name="tile2atlas-app" extends="div">
+<template>
+  <section>
+    <header>
+      <x-nav-bar titre="{{app.titre}}"></x-nav-bar>
+    </header>
+    <section id="view" class="container">
+      <template instantiate="if app.currentView == ViewEnum.CHOOSE">
+        <x-tileset-choose></x-tileset-choose>
+      </template>
+      <template instantiate="if app.currentView == ViewEnum.CONFIGURE">
+        <x-tileset-configure></x-tileset-configure>
+      </template>
+      <template instantiate="if app.currentView == ViewEnum.EXPORT">
+        <x-tileset-export></x-tileset-export>
+      </template>
+    </section>
+  </section>
+</template>
+<script type="application/dart" src="app.dart"></script>
+</element>
+</body>
+</html>

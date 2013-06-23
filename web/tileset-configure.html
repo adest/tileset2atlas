@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+<element name="x-tileset-configure" constructor="TilesetConfigure" extends="div">
+<style>
+  .form-inline > * {
+    margin-left: 10px;
+  }
+
+  .inline {
+    display: inline-block;
+    margin-left: 10px;
+  }
+
+  #tileset-area {
+    border: 1px solid red;
+  }
+</style>
+<template>
+  <div class="page-header">
+    <h1>Configure Tileset&nbsp;<small>Choose tile height and width for automatic tileset generation</small></h1>
+  </div>
+  <!-- form -->
+  <div class="row-fluid">
+    <form class="form-inline span7">
+      <label class="control-label" >Tile</label>
+      <select class="input-small" disabled>
+        <option>Custom</option>
+        <option>32 * 32</option>
+        <option>64 * 64</option>
+      </select>
+      <div class="input-prepend input-append">
+        <span class="add-on">Width</span>
+        <input class="input-mini"
+                id="tileHeight"
+                type="number"
+                bind-value="tileWidth"
+                on-change="renderTileset()">
+        <span class="add-on">Px</span>
+      </div>
+      <div class="input-prepend input-append">
+        <span class="add-on">Height</span>
+        <input class="input-mini"
+                id="tileWidth"
+                type="number"
+                bind-value="tileHeight"
+                on-change="renderTileset()">
+        <span class="add-on">Px</span>
+      </div>
+      <button type="button" class="btn btn-primary" on-click="buildAtlas()">Valid</button>
+    </form>
+    <div class="span5">
+      <label class="inline">Image</label>
+      <div class="inline alert alert-info">height: {{app.tileset.image.height}}</div>
+      <div class="inline alert alert-info">Width: {{app.tileset.image.width}}</div>
+    </div>
+  </div>
+  <!-- sccene -->
+  <div class="row-fluid">
+    <canvas id="tileset-area">This browser dose not accept canvas!</canvas>
+  </div>
+</template>
+<script type="application/dart" src="tileset-configure.dart"></script>
+</element>
+</body>
+</html>

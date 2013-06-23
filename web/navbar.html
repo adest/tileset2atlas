@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- utilisation avec des liens
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">{{titre}}</a>
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+
+<html>
+<body>
+<element name="x-nav-bar" constructor="NavBar" extends="div" >
+<template>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="brand" href="#">{{titre}}</a>
+        <content></content>
+      </div>
+    </div>
+  </div>
+</template>
+<script type="application/dart">
+  import 'package:web_ui/web_ui.dart';
+
+  class NavBar extends WebComponent {
+    String titre;
+  }
+</script>
+</element>
+</body>
+</html>
