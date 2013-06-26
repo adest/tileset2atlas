@@ -26,7 +26,7 @@
   </div>
   <!-- form -->
   <div class="row-fluid">
-    <form class="form-inline span7">
+    <form class="form-inline span7" on-submit="onSubmitEvent($event)">
       <label class="control-label" >Tile</label>
       <select class="input-small" disabled>
         <option>Custom</option>
@@ -39,6 +39,7 @@
                 id="tileHeight"
                 type="number"
                 bind-value="tileWidth"
+                on-key-press="integerMask($event)"
                 on-change="renderTileset()">
         <span class="add-on">Px</span>
       </div>
@@ -48,6 +49,7 @@
                 id="tileWidth"
                 type="number"
                 bind-value="tileHeight"
+                on-key-press="integerMask($event)"
                 on-change="renderTileset()">
         <span class="add-on">Px</span>
       </div>

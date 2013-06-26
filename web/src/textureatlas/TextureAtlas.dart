@@ -11,9 +11,9 @@ class TextureAtlas {
   List<TextureFrame> frames;
 
   TextureAtlas.fromTileset(ImageElement sourceImage, int tileHeight, int tileWidth) {
-    if (sourceImage.height > tileHeight &&
+    if (sourceImage.height >= tileHeight &&
           sourceImage.height % tileHeight == 0 &&
-          sourceImage.width > tileWidth &&
+          sourceImage.width >= tileWidth &&
           sourceImage.width % tileWidth == 0) {
       frames = [];
       int number = 1;
